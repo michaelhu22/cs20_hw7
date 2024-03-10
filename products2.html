@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>products2</title>
+</head>
+
+<style>
+        div {
+                font-family: "Comic Sans MS";
+        }
+        .cost {
+                color: green;
+        }
+</style>
+<body>
+<div>
+        <h1>Products:</h1>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        $.get("https://michaelhu22.github.io/cs20_hw7/products.json", function(data) {
+                product_string = ""
+                data.forEach(element => {
+                        product_string += "<h2>" + element.name + "</h2>"
+                        product_string += "<p>" + element.description + "</p>"
+                        product_string += "<p class='cost'> Price: " + element.price + "</p>"
+                        for (subcategory in element.category) {
+                                product_string +="<p><i>" + element.category[subcategory] + "</i></p>"
+                        }
+                });
+                product_string += "<br>"
+
+                document.getElementById("display-data").innerHTML = product_string
+
+        })
+
+</script>
+
+	<div id="display-data">&nbsp;</div>
+</body>
+</html>

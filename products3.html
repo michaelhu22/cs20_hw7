@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>products3</title>
+</head>
+
+<style>
+        div {
+                font-family: "Comic Sans MS";
+        }
+        .cost {
+                color: green;
+        }
+</style>
+<body>
+<div>
+        <h1>Products:</h1>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+        $.get("https://michaelhu22.github.io/cs20_hw7/products.json", function(data) {
+                // set for no overlap
+                categories = new Set()
+                product_string = ""
+                data.forEach(element => {
+                        for (subcategory in element.category.subcategory) {
+                                if (subcategory != "")
+                                        categories.add(element.category.subcategory[subcategory])
+                        }
+                });
+                option = ""
+
+                categories.forEach(function(category) {
+                        option += "<option value='"+ category + "'>"+ category + "</option>"
+                })
+            $("#category-select").html(option)
+
+            $("#filter-button").click(function(f) {
+                f.preventDefault()
+                product_string = ""
+                category = $("#category-select").val()
+                data.forEach(element => {
+                    for (subcategory in element.category.subcategory) {
+                        if (category == element.category.subcategory[subcategory]) {
+                                product_string += "<p>" + element.name + "</p>"
+                        }
+                    }    
+                });        
+                $("#display-data").html(product_string)
+        })
+        })
+
+</script>
+        <form>
+                <label for="category-select">Select Category:</label>
+                <select id = "category-select"></select>
+                <button id = "filter-button"> Filter </button>
+        </form>
+
+	<div id="display-data"></div>
+</body>
+</html>
