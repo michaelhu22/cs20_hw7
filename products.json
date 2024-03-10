@@ -4,7 +4,7 @@
                 "description": "A patty of beef between two bread buns",
                 "price": "$3",
                 "category": {
-                        "subcategory": "Food"
+                        "subcategory": ["Food"]
                 }
         },
         {
@@ -12,7 +12,7 @@
                 "description": "A patty of beef between two bread buns + Cheese",
                 "price": "$4",
                 "category": {
-                        "subcategory": "Food"
+                        "subcategory": ["Food"]
                 }
         },
         {
@@ -20,7 +20,7 @@
                 "description": "A pizza with sauce and cheese",
                 "price": "$8",
                 "category": {
-                        "subcategory": "Food"
+                        "subcategory": ["Food"]
                 }
         },
         {
@@ -36,7 +36,7 @@
                 "description": "A \"salad\" made with Chicken, Bacon, Eggs, Lettuce, Tomatoes, Avacados, Cheese and Dressing",
                 "price": "$5",
                 "category": {
-                        "subcategory": "Food"
+                        "subcategory": ["Food"]
                 }
         },
         {
