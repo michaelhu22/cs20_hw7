@@ -1,0 +1,82 @@
+[
+        {
+                "name": "Hamburger",
+                "description": "A patty of beef between two bread buns",
+                "price": "$3",
+                "category": {
+                        "subcategory": "Food"
+                }
+        },
+        {
+                "name": "Cheeseburger",
+                "description": "A patty of beef between two bread buns + Cheese",
+                "price": "$4",
+                "category": {
+                        "subcategory": "Food"
+                }
+        },
+        {
+                "name": "Cheese Pizza",
+                "description": "A pizza with sauce and cheese",
+                "price": "$8",
+                "category": {
+                        "subcategory": "Food"
+                }
+        },
+        {
+                "name": "Caesar Salad",
+                "description": "A salad made with romaine lettuce, croutons, parmesean cheese and housemade caesar dressing",
+                "price": "$3",
+                "category": {
+                        "subcategory": ["Food", "Vegetarian"]
+                }
+        },
+        {
+                "name": "Cobb Salad",
+                "description": "A \"salad\" made with Chicken, Bacon, Eggs, Lettuce, Tomatoes, Avacados, Cheese and Dressing",
+                "price": "$5",
+                "category": {
+                        "subcategory": "Food"
+                }
+        },
+        {
+                "name": "Water",
+                "description": "Water.",
+                "price": "$1",
+                "category": {
+                        "subcategory": ["Beverage", "Vegetarian"]
+                }
+        },
+        {
+                "name": "Orange Juice",
+                "description": "Sweet, refreshing orange juice made with fresh squeezed oranges (or just Tropicana)",
+                "price": "$10",
+                "category": {
+                        "subcategory": ["Beverage", "Vegetarian"]
+                }
+        },
+        {
+                "name": "Orange",
+                "description": "Progenitor of Orange Juice. Costs more than the orange juice so people will be tricked into buying the also overpriced juice.",
+                "price": "$11",
+                "category": {
+                        "subcategory": ["Food", "Vegetarian"]
+                }
+        },
+        {
+                "name": "Vodka",
+                "description": "1.5 Liters of 80 proof Vodka. Must finish entire bottle in one sitting.",
+                "price": "$0.50",
+                "category": {
+                        "subcategory": ["Beverage", "Vegetarian"]
+                }
+        },
+        {
+                "name": "Milk",
+                "description": "A calcium rich drink that was made by a cow. Good for growing children or people with broken bones",
+                "price": "$3",
+                "category": {
+                        "subcategory": ["Beverage", "Vegetarian"]
+                }
+        }
+]
